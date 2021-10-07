@@ -5,6 +5,18 @@ const app = express();
 const server = http.createServer(app);
 
 const path = require('path');
+
+const socketio = require('socket.io')
+
+const io = socketio(server);
+// socket.js에 연결
+require("./socket")(io);
+
+app.use((req, res, next) => {
+  req.io = io;
+  next()
+})
+
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"))
 
