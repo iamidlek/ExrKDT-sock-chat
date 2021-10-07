@@ -1,5 +1,5 @@
 {
-  "name": "ExrKDT-sock-chat",
+  "name": "exrkdt-sock-chat",
   "version": "1.0.0",
   "description": "Websocket chat service with express, socket.io",
   "main": "app.js",
