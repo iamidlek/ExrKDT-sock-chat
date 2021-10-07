@@ -16,7 +16,7 @@ module.exports = (filePath) => {
 
     for (let headerIndex=0; headerIndex < headers.length; headerIndex++){
       const header = headers[headerIndex];
-      rowData[headerIndex] = row.split(',')[headerIndex];
+      rowData[header] = row.split(',')[headerIndex];
     }
 
     rowsData.push(rowData);

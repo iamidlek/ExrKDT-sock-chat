@@ -4,6 +4,10 @@ const http = require('http');
 const app = express();
 const server = http.createServer(app);
 
+const path = require('path');
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"))
+
 const indexRouter = require('./routes/index');
 const clubsRouter = require('./routes/clubs')
 
